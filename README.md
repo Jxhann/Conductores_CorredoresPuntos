@@ -3,23 +3,6 @@
 
 ![imagen](https://github.com/user-attachments/assets/5b885f07-71c1-4ed0-ad4e-4c190f29c3b3)
 
-# Top Drivers by Points
-
-Este proyecto es una aplicación Java que se conecta a una base de datos PostgreSQL y muestra a los conductores con más puntos en un año seleccionado. La interfaz gráfica está construida con Swing y permite a los usuarios seleccionar un año, refrescar los datos y salir de la aplicación.
-
-## Descripción del Código
-
-### Clase `Main`
-
-La clase `Main` gestiona la conexión con la base de datos y la interfaz gráfica de la aplicación.
-
-- **`connectDB()`**: Establece una conexión con la base de datos PostgreSQL usando JDBC.
-- **`createGUI()`**: Configura la interfaz gráfica utilizando `BorderLayout`. Crea el `JFrame`, paneles, y componentes como `JComboBox`, `JButton`, `JTable`, y `JProgressBar`.
-  - **Panel superior** (`topPanel`): Contiene el `JComboBox` para seleccionar el año, el botón de refrescar (`refreshButton`), y el botón de salir (`exitButton`).
-  - **Barra de progreso** (`progressBar`): Muestra el estado de carga mientras se actualizan los datos.
-  - **Tabla** (`table`): Muestra los datos de los conductores y sus puntos.
-- **`populateComboBox()`**: Llena el `JComboBox` con los años disponibles en la base de datos.
-- **`updateTableInBackground()`**: Utiliza un `SwingWorker` para ejecutar una consulta en segundo plano, actualizando la tabla con los resultados de la base de datos sin bloquear la interfaz de usuario.
 
 ### Código Fuente
 
